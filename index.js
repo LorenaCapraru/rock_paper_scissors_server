@@ -23,7 +23,7 @@ io.on("connection", (socket) => {
   });
 });
 
-const port = process.env.PORT;
+const port = process.env.PORT || 8080;
 httpServer.listen(port, () => console.log(`Listening on port ${port}`));
 
 // server.listen(process.env.PORT);

@@ -3,7 +3,7 @@ const shortId = require("shortid");
 const roomHandler = (io, socket, rooms) => {
   const create = (payload, callback) => {
     console.log(payload.type);
-    if (payload.type === "stranger" || payload.type === "friend") {
+    if (payload.type === "stranger") {
       const index = rooms.findIndex(
         (room) => room.vacant === true && room.private === false
       );
